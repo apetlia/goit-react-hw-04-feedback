@@ -1,13 +1,11 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.section`
-  padding-top: 30px;
-  padding-bottom: 30px;
-`;
-
-export const Wrapper = styled.div`
+export const Container = styled.div`
   padding-left: 15px;
   padding-right: 15px;
+  :not(:last-child) {
+    margin-bottom: 30px;
+  }
 `;
 
 export const Title = styled.h2`

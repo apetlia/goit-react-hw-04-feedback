@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Title, Wrapper } from './Section.styled';
+import { Container, Title } from './Section.styled';
 
 const Section = ({ title, children }) => {
   return (
-    <Container>
-      <Wrapper>
-        <Title>{title}</Title>
-        {children}
-      </Wrapper>
+    <Container ner>
+      <Title>{title}</Title>
+      {children}
     </Container>
   );
 };

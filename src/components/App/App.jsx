@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Statistics from './Statistics';
-import FeedbackOptions from './FeedbackOptions';
-import Section from './Section/Section';
+import Statistics from '../Statistics';
+import FeedbackOptions from '../FeedbackOptions';
+import Section from '../Section/Section';
+import { Wrapper } from './App.styled';
 
 const INITIAL_STATE = {
   good: 0,
@@ -34,14 +35,13 @@ class App extends Component {
     const { good, bad, neutral } = this.state;
 
     return (
-      <>
+      <Wrapper>
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback={this.handleChange}
           />
         </Section>
-
         <Section title={'Statictics'}>
           <Statistics
             good={good}
@@ -51,9 +51,9 @@ class App extends Component {
             positivePercentage={this.countPositiveFeedbackPercentage()}
           />
         </Section>
-      </>
+      </Wrapper>
     );
   }
 }
 
-export { App };
+export default App;
