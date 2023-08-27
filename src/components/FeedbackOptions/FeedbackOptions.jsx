@@ -6,11 +6,16 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onClickBtnFeedback }) => {
   return (
     <Wrapper>
       {options.map(name => (
-        <Button key={name} type="button" name={name} onClick={onLeaveFeedback}>
+        <Button
+          key={name}
+          type="button"
+          name={name}
+          onClick={onClickBtnFeedback}
+        >
           {capitalizeFirstLetter(name)}
         </Button>
       ))}
